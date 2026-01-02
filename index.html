@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Avion</title>
-        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/desktop.css">
+        <link rel="stylesheet" href="./styles/mobile.css" media="screen and (max-width: 768px)">
     </head>
 
     <body class="page">
@@ -13,6 +14,7 @@
                 <div class="header__logo">
                     <h1 class="header__title">Avion</h1>
                 </div>
+
                 <nav class="header__nav">
                     <a class="header__icon header__icon--search" href="#Search">
                         <img class="header__icon-img" src="assets/icons/Search.png" alt="поиск">
@@ -23,7 +25,11 @@
                     <a class="header__icon header__icon--account" href="#Account">
                         <img class="header__icon-img" src="assets/icons/User--avatar.png" alt="аватар пользователя">
                     </a>
+                    <button class="burger-menu" id="burgerMenu" aria-label="Открыть меню">
+                        <img class="burger-menu-img" src="assets/icons/burger-menu.png" alt="Бургер меню">
+                    </button>
                 </nav>
+
             </div>
             
             <div class="header__categories">
@@ -54,6 +60,56 @@
                 </nav>
             </div>
         </header>
+
+        <div class="burger-overlay" id="burgerOverlay"></div>
+        <nav class="burger-nav" id="burgerNav">
+            <div class="burger-nav__header">
+                <div class="burger-nav__logo">
+                    <h2 class="burger-nav__title">Avion</h2>
+                </div>
+                <button class="burger-nav__close" id="burgerClose" aria-label="Закрыть меню">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <ul class="burger-nav__list">
+                <li class="burger-nav__item">
+                    <a class="burger-nav__link" href="#Plant_pots">Цветочные горшки</a>
+                </li>
+                <li class="burger-nav__item">
+                    <a class="burger-nav__link" href="#Ceramics">Керамика</a>
+                </li>
+                <li class="burger-nav__item">
+                    <a class="burger-nav__link" href="#Tables">Столы</a>
+                </li>
+                <li class="burger-nav__item">
+                    <a class="burger-nav__link" href="#Chairs">Стулья</a>
+                </li>
+                <li class="burger-nav__item">
+                    <a class="burger-nav__link" href="#Crockery">Посуда</a>
+                </li>
+                <li class="burger-nav__item">
+                    <a class="burger-nav__link" href="#Tableware">Сервировка</a>
+                </li>
+                <li class="burger-nav__item">
+                    <a class="burger-nav__link" href="#Cutlery">Столовые приборы</a>
+                </li>
+                <!-- Добавим также иконки для мобильной версии -->
+                <!-- <li class="burger-nav__item burger-nav__item--icons">
+                    <div class="burger-nav__icons">
+                        <a class="burger-nav__icon" href="#Search" aria-label="Поиск">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a class="burger-nav__icon" href="#Shopping-cart" aria-label="Корзина">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a class="burger-nav__icon" href="#Account" aria-label="Аккаунт">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                </li> -->
+            </ul>
+        </nav>
 
         <main class="main">
             <section class="hero">
@@ -284,5 +340,10 @@
                 </div>
             </div>
         </footer>
+        <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+            <img class="scroll-top__icon" src="assets/icons/arrow_up.png" alt="иконка_стрелки">
+        </button>
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/scroll_button.js"></script>
     </body>
 </html>
